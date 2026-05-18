@@ -27,6 +27,39 @@
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💰</text></svg>">
 
   <link rel="stylesheet" href="styles.css">
+
+  <!-- ==========================================
+       GOOGLE ADSENSE - AUTO ADS (OPCIONAL)
+       PASOS:
+       1. Ve a https://adsense.google.com y crea una cuenta
+       2. Una vez aprobado, ve a "Anuncios automáticos"
+       3. Copia el código <script> que Google te da
+       4. REEMPLAZA TODO EL BLOQUE de abajo (entre las etiquetas <script>)
+       5. Si NO usas AdSense aún, puedes borrar o comentar este bloque
+       ========================================== -->
+  <!--
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-TU_ID_DE_PUBLICADOR"
+       crossorigin="anonymous"></script>
+  -->
+
+  <!-- ==========================================
+       GOOGLE ANALYTICS (OPCIONAL)
+       PASOS:
+       1. Ve a https://analytics.google.com y crea una cuenta
+       2. Crea una propiedad web y copia tu "Measurement ID" (G-XXXXXXXXXX)
+       3. REEMPLAZA "G-XXXXXXXXXX" en la línea de abajo con tu ID real
+       4. Si NO usas Analytics aún, puedes borrar o comentar este bloque
+       ========================================== -->
+  <!--
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+  -->
+
 </head>
 <body>
   <!-- ===== HEADER ===== -->
@@ -59,7 +92,16 @@
     </div>
   </section>
 
-  <!-- ADSENSE SLOT 1 -->
+  <!-- ADSENSE SLOT 1 (después del Hero)
+       REEMPLAZA el <div> de abajo con tu unidad de anuncio de Google AdSense.
+       Ejemplo:
+       <ins class="adsbygoogle"
+            style="display:block"
+            data-ad-client="ca-pub-TU_ID"
+            data-ad-slot="1234567890"
+            data-ad-format="auto"></ins>
+       <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+  -->
   <div class="adsense"><!-- ADSENSE SLOT - HERO BOTTOM --></div>
 
   <!-- ===== CALCULADORAS ===== -->
@@ -169,8 +211,8 @@
       </div>
     </div>
   </section>
+  <!-- ADSENSE SLOT 2 (después de calculadoras) -->
 
-  <!-- ADSENSE SLOT 2 -->
   <div class="adsense"><!-- ADSENSE SLOT - AFTER CALCULATORS --></div>
 
   <!-- ===== COMPARADOR DE COOPERATIVAS ===== -->
@@ -218,8 +260,8 @@
       <button class="btn btn--outline" id="addCoopBtn">+ Agregar cooperativa</button>
     </div>
   </section>
+  <!-- ADSENSE SLOT 3 (antes del blog) -->
 
-  <!-- ADSENSE SLOT 3 -->
   <div class="adsense"><!-- ADSENSE SLOT - BEFORE BLOG --></div>
 
   <!-- ===== BLOG ===== -->
@@ -285,8 +327,8 @@
       </div>
     </div>
   </section>
+  <!-- ADSENSE SLOT 4 (después del blog) -->
 
-  <!-- ADSENSE SLOT 4 -->
   <div class="adsense"><!-- ADSENSE SLOT - AFTER BLOG --></div>
 
   <!-- ===== CONTACTO ===== -->

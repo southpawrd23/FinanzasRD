@@ -142,6 +142,30 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // ==========================================
+  // TASA USD/DOP EN VIVO
+  // ==========================================
+  function fetchLiveRate() {
+    const tasaInput = document.getElementById('convTasa');
+    fetch('https://open.er-api.com/v6/latest/USD')
+      .then(res => res.json())
+      .then(data => {
+        if (data && data.rates && data.rates.DOP) {
+          const rate = data.rates.DOP;
+          tasaInput.value = rate.toFixed(2);
+          // Actualizar resultado
+          const dolares = parseFloat(document.getElementById('convDolares').value) || 0;
+          const total = calcConversor(dolares, rate);
+          document.querySelector('#convResult .result-value').textContent = 'RD$ ' + total.toLocaleString('es-DO', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+        }
+      })
+      .catch(() => {
+        // Si falla la API, se mantiene el valor por defecto
+      });
+  }
+
+  fetchLiveRate();
+
+  // ==========================================
   // CÁLCULOS INICIALES (al cargar)
   // ==========================================
   function runInitialCalculations() {
